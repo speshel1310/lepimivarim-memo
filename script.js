@@ -307,7 +307,7 @@ class MemoryGame {
     sendMetric(name, params = {}) {
         if (window.ym && typeof window.ym === 'function') {
             try {
-                window.ym(102207500, 'reachGoal', name, params);
+                window.ym(102266199, 'reachGoal', name, params);
             } catch (e) {
                 console.error(`Ошибка отправки метрики ${name}:`, e);
             }
@@ -322,6 +322,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Определяем мобильное устройство или десктоп
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (window.ym && typeof window.ym === 'function') {
-        window.ym(102207500, 'reachGoal', isMobile ? 'game_mobile' : 'game_desktop');
+        window.ym(102266199, 'reachGoal', isMobile ? 'game_mobile' : 'game_desktop');
     }
 });
